@@ -36,6 +36,10 @@ export default function Flag(){
     fetchFlag();
   },[])
     return(
+        <>
+        <div>
+            <h1>Flag</h1>
+        </div>
         <div
         style={{
           display: "flex",
@@ -44,7 +48,8 @@ export default function Flag(){
           height: "100vh",
           flexWrap: "wrap",
         }}
-      >
+      > 
+     
         {flag.map((country) => (
           <Tile
             key={country.cca3}
@@ -54,5 +59,6 @@ export default function Flag(){
           />
         ))}
       </div>
+        </>
     )
 }
